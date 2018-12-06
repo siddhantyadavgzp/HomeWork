@@ -48,15 +48,15 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
         holder.title.setText(movie.getTitle());
         holder.genre.setText(movie.getGenre());
         holder.year.setText(movie.getYear());
-        fuck(holder);
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "what the fuck am I doing", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-    public void fuck(MyViewHolder h1){
-h1.cardView.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Toast.makeText(v.getContext(), "what the fuck am I doing", Toast.LENGTH_SHORT).show();
-        }
-    });}
+
+
     @Override
     public int getItemCount() {
         return moviesList.size();
