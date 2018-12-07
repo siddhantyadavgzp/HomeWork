@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BlankFragment()).commit();
                 break;
             case R.id.Exit:
-                Toast.makeText(MainActivity.this, "Sorry didn't had enough time to google how to close it", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Application Closed", Toast.LENGTH_LONG).show();
+                finish();
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
